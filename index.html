@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="hero">
+    <img src="images/header.jpg" alt="Podcast Banner">
+    <div class="overlay">
+      <h1>🎙️ Podcast Hub</h1>
+      <p>Your daily dose of podcasts, tools & more!</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#" class="tablink active" data-target="home">🏠 Home</a></li>
+      <li><a href="#" class="tablink" data-target="episodes">🎧 Episodes</a></li>
+      <li><a href="#" class="tablink" data-target="tools">🛠 Tools</a></li>
+      <li><a href="#" class="tablink" data-target="about">ℹ️ About</a></li>
+      <li><a href="#" class="tablink" data-target="contact">📩 Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HOME DASHBOARD -->
+    <section id="home" class="tabcontent active">
+      <h2>Welcome to Podcast Hub</h2>
+      <p>Discover amazing episodes, calculate your subscription, and manage your time!</p>
+      <div class="dashboard-buttons">
+        <button class="go-to" data-target="tools">Try Tools ⚡</button>
+        <button class="go-to" data-target="episodes">Browse Episodes 🎧</button>
+      </div>
+    </section>
+
+    <!-- PODCAST EPISODES -->
+    <section id="episodes" class="tabcontent">
+      <h2>🎧 Latest Episodes</h2>
+      <div class="episode-list">
+        <div class="episode-card">
+          <img src="images/ep1.jpg" alt="Episode 1">
+          <h3>Episode 1: The Beginning</h3>
+          <p>Introduction to our podcast journey.</p>
+          <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="episode-card">
+          <img src="images/ep2.jpg" alt="Episode 2">
+          <h3>Episode 2: Deep Dive</h3>
+          <p>Exploring exciting topics with experts.</p>
+          <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="episode-card">
+          <img src="images/ep3.jpg" alt="Episode 3">
+          <h3>Episode 3: Special Guest</h3>
+          <p>A chat with an inspiring guest.</p>
+          <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS (calculators combined here) -->
+    <section id="tools" class="tabcontent">
+      <h2>🛠 Podcast Tools</h2>
+
+      <!-- Subscription -->
+      <div class="tool-box">
+        <h3>💰 Subscription Price Calculator</h3>
+        <label>Base Amount:</label>
+        <input type="number" id="amount" placeholder="Enter subscription amount">
+        <label>GST %:</label>
+        <select id="gstRate">
+          <option value="5">5%</option>
+          <option value="12">12%</option>
+          <option value="18">18%</option>
+        </select>
+        <button id="calc">Calculate</button>
+        <div class="result">
+          <p>Base: <span id="base"></span></p>
+          <p>GST: <span id="gstamt"></span></p>
+          <p>Total: <span id="total"></span></p>
+        </div>
+      </div>
+
+      <!-- Time Budget -->
+      <div class="tool-box">
+        <h3>⏳ Time Budget Calculator</h3>
+        <label>Total Hours:</label><input type="number" id="hours">
+        <label>News %:</label><input type="number" id="news">
+        <label>Music %:</label><input type="number" id="music">
+        <label>Education %:</label><input type="number" id="edu">
+        <label>Entertainment %:</label><input type="number" id="ent">
+        <button id="eval">Evaluate</button>
+        <div class="result">
+          <p>News: <span id="rnews"></span> hrs</p>
+          <p>Music: <span id="rmusic"></span> hrs</p>
+          <p>Education: <span id="redu"></span> hrs</p>
+          <p>Entertainment: <span id="rent"></span> hrs</p>
+        </div>
+      </div>
+
+      <!-- Episode Order -->
+      <div class="tool-box">
+        <h3>📦 Episode Order Calculator</h3>
+        <label>Category:</label>
+        <select id="category">
+          <option value="50">News (₹50)</option>
+          <option value="70">Music (₹70)</option>
+          <option value="100">Education (₹100)</option>
+        </select>
+        <label>Episodes:</label>
+        <input type="number" id="qty" value="1">
+        <div class="result">
+          <p>Price per Ep: ₹<span id="price">50</span></p>
+          <p>Total Cost: ₹<span id="totalCost">50</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="tabcontent">
+      <h2>ℹ️ About Us</h2>
+      <p>Podcast Hub is your one-stop destination for podcast episodes and smart tools to manage subscriptions and time.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="tabcontent">
+      <h2>📩 Contact</h2>
+      <p>Email: contact@podcasthub.com</p>
+      <p>Follow us on social media!</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Podcast Hub | Designed for Lab Experiment</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
